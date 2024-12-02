@@ -1,5 +1,3 @@
-# https://leetcode.com/problems/add-two-numbers/description/
-
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -28,11 +26,15 @@ class Solution:
 
         final_str = int(l1_str) + int(l2_str)
         final_list = list(str(final_str))
-        final_list = [int(digit) for digit in final_list]
-        final_list.reverse()
+        final_listt = []
+
+        for digit in final_list:
+            final_listt.append(int(digit))
+            
+        final_listt.reverse()
         dummy = ListNode()
         curr = dummy
-        for val in final_list:
+        for val in final_listt:
             curr.next = ListNode(val)
             curr = curr.next
         return dummy.next
