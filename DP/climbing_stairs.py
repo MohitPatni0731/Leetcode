@@ -19,7 +19,7 @@ class Solution:
 
         def f(x):
             if x in memo:
-                return memo
+                return memo[x]
             else:
                 memo[x] = f(x-1) + f(x-2)
                 return memo[x]
